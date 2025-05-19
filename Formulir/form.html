@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Evaluasi Gizi</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Itim&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- HEADER -->
+    <div class="header-container">
+        <div class="nama-website">Kesehatan Gizi & Nutrisi</div>
+        <!-- MENU -->
+        <nav class="nav-menu">
+            <a href="../Homepage/index.html">Beranda</a>
+            <a href="./form.html">Formulir</a>
+            <a href="../Evaluation/eval.html">Evaluasi</a>
+            <a href="../AboutUs/about.html">About Us</a>
+        </nav>
+    </div>
+
+    <!-- Banner Gambar -->
+    <div class="banner-container">
+        <div class="banner-image">
+            <img src="../image/Banner.png">
+        </div>
+        <div class="banner-text">
+            <h2>Nutrisi Bukan Pilihan, Tapi Kebutuhan</h2>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="main-content">
+            <form id="giziForm" onsubmit="return validateForm()">
+                <section class="form-section">
+                    <h2>Data Pribadi</h2>
+                    <div class="input-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="usia">Usia:</label>
+                        <input type="number" id="usia" name="usia" placeholder="Dalam tahun" min="1" max="120">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="gender">Jenis Kelamin:</label>
+                        <select id="gender" name="gender">
+                            <option value="">--Pilih Jenis Kelamin--</option>
+                            <option value="laki">Laki-laki</option>
+                            <option value="perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Data Fisik</h2>
+                    <div class="input-group">
+                        <label for="berat">Berat Badan (kg):</label>
+                        <input type="number" id="berat" name="berat" placeholder="Dalam kilogram" step="0.1" min="1"
+                            max="300">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="tinggi">Tinggi Badan (cm):</label>
+                        <input type="number" id="tinggi" name="tinggi" placeholder="Dalam centimeter" min="50"
+                            max="250">
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Data Kontak</h2>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="email@contoh.com">
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Kirim Evaluasi</button>
+                    <button type="reset" class="reset-btn">Reset Form</button>
+                </div>
+            </form>
+
+            <div id="errorModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3>Form Tidak Valid</h3>
+                    <p id="errorMessage"></p>
+                    <button class="modal-btn">Mengerti</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="info-box">
+                <h3>Tips Pengisian</h3>
+                <ul>
+                    <li>Ukur berat badan di pagi hari sebelum makan</li>
+                    <li>Gunakan timbangan yang akurat</li>
+                    <li>Ukur tinggi badan tanpa alas kaki</li>
+                    <li>Pastikan email yang dimasukkan aktif</li>
+                </ul>
+                <div class="note">
+                    <p>Data Anda akan kami jaga kerahasiaannya.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- FOOTER -->
+    <div class="footer">
+        <div class="group-footer">
+            <p>&copy; DPW-2024-2-A04_TA</p>
+            <p>Ahmadi Hadi Nuryani | Bunga Adenis Dea Fanny</p>
+            <p class="change-p">Qomaruddin | Badruz Zaman Ash Sholih</p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

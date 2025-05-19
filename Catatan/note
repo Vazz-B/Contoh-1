@@ -1,0 +1,31 @@
+<div class="sidebar">
+        <div class="sidebar-kiri">
+            <img src="../image/Sidebar.png">
+        </div>
+        <div class="sidebar-kanan">
+            <img src="../image/Sidebar.png">
+        </div>
+</div>
+
+.sidebar {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    overflow-x: hidden;
+}
+
+/* STYLING KHUSUS GAMBAR SIDEBAR */
+.sidebar img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* STYLING KHUSUS GAMBAR SIDEBAR KIRI */
+.sidebar-kiri {
+    transform: translateX(-190%) scaleX(-1);
+}
+
+/* STYLING KHUSUS GAMBAR SIDEBAR KANAN */
+.sidebar-kanan {
+    transform: translateX(190%);
+}
